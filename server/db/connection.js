@@ -1,6 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
-const uri =
-  "mongodb+srv://jdmacmurtrie:kKCH2aRKEK7ahrY4@mern-tutorial-cluster.zh16u6w.mongodb.net/?retryWrites=true&w=majority&appName=mern-tutorial-cluster";
+import "dotenv/config";
+
+const uri = process.env.ATLAS_URI;
 
 const client = new MongoClient(uri, {
   serverApi: {
